@@ -1,48 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather Trackers</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    h1 {
-      margin-bottom: 12px;
-    }
-    p {
-      color: #bbb;
-      margin-bottom: 40px;
-    }
-    a {
-      display: block;
-      max-width: 320px;
-      margin: 16px auto;
-      padding: 18px 20px;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      border: 1px solid #333;
-      border-radius: 12px;
-      font-size: 18px;
-    }
-    a:hover {
-      background: #1a1a1a;
-      border-color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
-  <h1>Weather Trackers</h1>
-  <p>Pick one:</p>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h1>Weather Trackers</h1>
+          <p>Choose the warning feed you want to watch.</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <span class="pill"><strong>Live maps</strong></span>
+        <span class="pill"><strong>City labels</strong></span>
+        <span class="pill"><strong>Clear alerts</strong></span>
+      </div>
+    </header>
 
-  <a href="./tornado/">Tornado Warning Tracker</a>
-  <a href="./flash-flood/">Flash Flood Warning Tracker</a>
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge warn"><span class="dot"></span> Weather.gov alerts</span>
+        <h2>Fast access to tornado and flash flood warnings</h2>
+        <p>
+          The trackers show live warnings, a clearer map with city markers, location tools, and alert cards that are easier to scan.
+          Humans do seem to enjoy turning dangerous weather into a scavenger hunt, so this helps a little.
+        </p>
+        <div class="hero-tags">
+          <span class="badge good"><span class="dot good"></span> Polygons on the map</span>
+          <span class="badge"><span class="dot"></span> Nearby cities</span>
+          <span class="badge"><span class="dot"></span> Sound and notifications</span>
+          <span class="badge"><span class="dot"></span> Export and import settings</span>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="label">Trackers</div>
+            <div class="value">2</div>
+            <div class="sub">Tornado and flash flood</div>
+          </div>
+          <div class="stat">
+            <div class="label">Map labels</div>
+            <div class="value">Cities</div>
+            <div class="sub">Major metro markers included</div>
+          </div>
+          <div class="stat">
+            <div class="label">Layout</div>
+            <div class="value">Cleaner</div>
+            <div class="sub">Stronger hierarchy and spacing</div>
+          </div>
+          <div class="stat">
+            <div class="label">Alerts</div>
+            <div class="value">Live</div>
+            <div class="sub">Weather.gov feeds, auto-refreshing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-main">
+      <div class="panel">
+        <div class="section-title">
+          <div>
+            <h3>Tornado warning tracker</h3>
+            <p>Designed for fast scanning and clearer map context.</p>
+          </div>
+        </div>
+        <div class="btn-row">
+          <a class="btn primary" href="./tornado/">Open tornado tracker</a>
+          <a class="btn" href="./tornado/">View map and alerts</a>
+        </div>
+        <p class="footer-note">Includes live alert cards, location tools, sound tests, and city labels on the map.</p>
+      </div>
+
+      <div class="panel">
+        <div class="section-title">
+          <div>
+            <h3>Flash flood warning tracker</h3>
+            <p>Same layout, same controls, less guessing.</p>
+          </div>
+        </div>
+        <div class="btn-row">
+          <a class="btn primary" href="./flash-flood/">Open flash flood tracker</a>
+          <a class="btn" href="./flash-flood/">View map and alerts</a>
+        </div>
+        <p class="footer-note">City markers and better spacing make the alert map easier to read at a glance.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
